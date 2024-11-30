@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: DynaPuff, cursive;
+    /* border: red solid 1px; */
+}
+
+body {
+    background-image:url(assets/paper.jpg);
+    background-size:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Window {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+}
+
+#gameWindowBackground {
+    background-image:url(assets/box-paper.jpg);
+    border: black 5px solid ;
+    position: absolute;
+    z-index: -1;
+
+}
+ 
+/* code for roughen edges around the game window bacgkround border start  >>> */
+
+.turbulence {
+    filter: url(#turbulence);
+}
+
+.displacement-map {
+    filter: url(#displacement);
+}
+
+.combined {
+    filter: url(#combined);
+}
+.combinedLow {
+    filter: url(#combinedLow);
+}
+
+/* code for roughen edges around the game window bacgkround border end  <<< */
+
+
+#gameWindow {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}   
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 0.2em;
+}
+
+#gameHeading {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+#choices {
+    display: flex;
+    justify-content: center;
+    width: 30em;
+    height: 10em;
+}
+
+.choiceHeading {
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.choiceImage {
+    background-color: white;
+    font-size: 4em;
+    padding: 0.2em;
+    margin-right: 0.2em;
+    border-radius: 50%;
+}       
+
+#choiceWindow {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.choiceCircle{
+    position: relative;
+}
+
+.choiceName {
+    margin-top: 0.5em;
+}
+.combinedLow {
+    position: absolute;
+    top: 0;
+    right: 0.2em;
+    border: solid black 4px;
+    width: 1.65em;
+    height: 1.65em;
+    border-radius: 50%;
+}
+
+#result {
+    margin-top: 2em;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSOR</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="gameWindow" class="Window">
+        <h1>ROCK PAPER SCISSOR</h1>
+        <h2 id="gameHeading">Choose Your Move</h2>
+        <div id="choiceWindow">
+            <div id="userChoices">
+                <h3 class="choiceHeading">User Choice</h3>
+                <div id="choices">
+                    <div id="rock" class="choiceCircle">
+                        <div class="choiceImage">👊
+                            <div class="combinedLow"></div>
+                        </div><div class="choiceName">ROCK</div>
+                    </div>
+                    <div id="paper" class="choiceCircle">
+                        <div class="choiceImage">👊
+                            <div class="combinedLow"></div>
+                        </div><div class="choiceName">PAPER</div>
+                    </div>
+                    <div id="scissor" class="choiceCircle">
+                        <div class="choiceImage">👊
+                            <div class="combinedLow"></div>
+                        </div><div class="choiceName">SCISSOR</div>
+                    </div>
+                </div>
+                <h3 id="userScore">Score: 0</h3>
+            </div>  
+            <div id="compChoices">
+                <h3 class="choiceHeading">Computer Choice</h3>
+                <div id="choices">
+                    <div id="rock" class="choiceCircle">
+                        <div class="choiceImage">👊
+                            <div class="combinedLow"></div>
+                        </div><div class="choiceName">ROCK</div>
+                    </div>
+                    <div id="paper" class="choiceCircle">
+                        <div class="choiceImage">👊
+                            <div class="combinedLow"></div>
+                        </div><div class="choiceName">PAPER</div>
+                    </div>
+                    <div id="scissor" class="choiceCircle">
+                        <div class="choiceImage">👊
+                            <div class="combinedLow"></div>
+                        </div><div class="choiceName">SCISSOR</div>
+                    </div>
+                </div>
+                <h3 id="compScore">Score: 0</h3>
+            </div>
+        </div>
+        <h2 id="result">Result: Computer Won</h2>
+    </div>
+    <div id="gameWindowBackground" class="combined Window"></div>
+
+    <!-- SVG filters -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0" width="0">
+        <defs>
+            <filter id="turbulence">
+                <feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="4" />
+            </filter>
+            <filter id="displacement">
+                <feDisplacementMap in="SourceGraphic" scale="4" />
+            </filter>
+            <filter id="combined">
+                <feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="4" />
+                <feDisplacementMap in="SourceGraphic" scale="10" />
+            </filter>
+            <filter id="combinedLow">
+                <feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="4" />
+                <feDisplacementMap in="SourceGraphic" scale="5" />
+            </filter>
+        </defs>
+    </svg>
+</body>
+</html>
