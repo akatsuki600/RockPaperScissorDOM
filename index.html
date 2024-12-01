@@ -8,12 +8,21 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="gameWindow" class="Window">
+    <div id="endDialog" class="Window">
+        <h1 id="endDialogHeading">YOU WON</h1>
+        <h2 id="endDialogSubHeading"> </h2>
+        <button id="playAgainGameBtn">PLAY AGAIN</button></div>
+    <div id="startDialog" class="Window">
         <h1>ROCK PAPER SCISSOR</h1>
+        <button id="startGameBtn">START GAME</button>
+    </div>
+    <div id="gameWindow" class="Window hiddenClass">
+        <h1>ROCK PAPER SCISSOR</h1>
+        <h2 id="resultText"></h2>
         <h2 id="gameHeading">Choose Your Move</h2>
         <div id="choiceWindow">
             <div id="userChoices">
-                <h3 class="choiceHeading">User Choice</h3>
+                <h3 class="choiceHeading">Your Choice</h3>
                 <div id="choices">
                     <div id="rock" class="choiceCircle">
                         <div class="choiceImage">👊
@@ -21,12 +30,12 @@
                         </div><div class="choiceName">ROCK</div>
                     </div>
                     <div id="paper" class="choiceCircle">
-                        <div class="choiceImage">👊
+                        <div class="choiceImage">✋
                             <div class="combinedLow"></div>
                         </div><div class="choiceName">PAPER</div>
                     </div>
                     <div id="scissor" class="choiceCircle">
-                        <div class="choiceImage">👊
+                        <div class="choiceImage">✌️
                             <div class="combinedLow"></div>
                         </div><div class="choiceName">SCISSOR</div>
                     </div>
@@ -42,12 +51,12 @@
                         </div><div class="choiceName">ROCK</div>
                     </div>
                     <div id="paper" class="choiceCircle">
-                        <div class="choiceImage">👊
+                        <div class="choiceImage">✋
                             <div class="combinedLow"></div>
                         </div><div class="choiceName">PAPER</div>
                     </div>
                     <div id="scissor" class="choiceCircle">
-                        <div class="choiceImage">👊
+                        <div class="choiceImage">✌️
                             <div class="combinedLow"></div>
                         </div><div class="choiceName">SCISSOR</div>
                     </div>
@@ -55,7 +64,6 @@
                 <h3 id="compScore">Score: 0</h3>
             </div>
         </div>
-        <h2 id="result">Result: Computer Won</h2>
     </div>
     <div id="gameWindowBackground" class="combined Window"></div>
 

@@ -5,7 +5,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: DynaPuff, cursive;
-    /* border: red solid 1px; */
+   
+}
+
+.hiddenClass {
+    display: none;
 }
 
 body {
@@ -22,6 +26,65 @@ body {
     width: 70%;
     height: 70%;
     position: absolute;
+}
+
+#startDialog {
+    background-image:url(assets/box-paper.jpg);
+    border: black 5px solid ;
+    position: absolute;
+    z-index: +1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#endDialog {
+    background-image:url(assets/box-paper.jpg);
+    border: black 5px solid ;
+    position: absolute;
+    z-index: +1;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#startGameBtn {
+    font-size: 2em;
+    text-align: center;
+    width: 300px;
+    background-color: transparent;
+    transition-property: font-size;
+    transition-timing-function: ease;
+    transition-duration: 200ms;
+}
+#startGameBtn:hover {
+    font-size: 2.5em;
+}
+
+#playAgainGameBtn {
+    font-size: 2em;
+    text-align: center;
+    width: 300px;
+    background-color: transparent;
+    transition-property: font-size;
+    transition-timing-function: ease;
+    transition-duration: 200ms;
+}
+#playAgainGameBtn:hover {
+    font-size: 2.5em;
+}
+
+#endDialogHeading {
+    margin-bottom: -0.2em;
+}
+
+#endDialogSubHeading {
+    margin-bottom: 2em;
 }
 
 #gameWindowBackground {
@@ -61,16 +124,21 @@ body {
 
 h1 {
     font-size: 5rem;
-    margin-bottom: 0.2em;
-}
-
-#gameHeading {
-    font-size: 3em;
     margin-bottom: 1em;
 }
 
+#gameHeading {
+    font-size: 2em;
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+}
+
+#resultText {
+    margin-bottom: 0.5em;
+    font-size: 2.5em;
+}
 #choices {
-    display: flex;
+    display: flex;  
     justify-content: center;
     width: 30em;
     height: 10em;
@@ -79,6 +147,16 @@ h1 {
 .choiceHeading {
     margin-bottom: 1em;
     font-size: 2em;
+}
+
+#userChoices > #choices > div > .choiceImage{
+    transition-property:background-color;
+    transition-timing-function: ease;
+    transition-duration: 500ms;
+}
+
+#userChoices > #choices > div > .choiceImage:active{
+    background-color: yellow;
 }
 
 .choiceImage {
@@ -99,6 +177,16 @@ h1 {
     position: relative;
 }
 
+#userChoices > #choices > div {
+    transition-property: font-size, background-color;
+    transition-timing-function: ease;
+    transition-duration: 200ms;
+}
+
+#userChoices > #choices > div:hover{
+    font-size: 1.2em;
+}
+
 .choiceName {
     margin-top: 0.5em;
 }
@@ -110,8 +198,4 @@ h1 {
     width: 1.65em;
     height: 1.65em;
     border-radius: 50%;
-}
-
-#result {
-    margin-top: 2em;
 }
