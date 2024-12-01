@@ -152,7 +152,7 @@ h1 {
 #userChoices > #choices > div > .choiceImage{
     transition-property:background-color;
     transition-timing-function: ease;
-    transition-duration: 500ms;
+    transition-duration: 100ms;
 }
 
 #userChoices > #choices > div > .choiceImage:active{
